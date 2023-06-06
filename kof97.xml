@@ -1,0 +1,120 @@
+<mamecheat version="1">
+
+  <cheat desc="Infinite Time">
+    <script state="on">
+      <action>temp0 =maincpu.pb@10A83A</action>
+    </script>
+    <script state="run">
+      <action condition="(frame % 120 == 0) AND (maincpu.pb@10A83A!=temp0 )">maincpu.pb@10A83A=60</action>
+    </script>
+  </cheat>
+
+<cheat desc="P2 enters when P1 presses start">
+    <script state="run">
+      <action condition="maincpu.pb@10a7f2=01">maincpu.pb@10a7f2=03</action>
+    </script>
+  </cheat>
+
+<cheat desc="Players Take No Damage">
+    <script state="run">
+      <action>maincpu.pb@100000=20</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="P2 Infinite HP">
+    <script state="run">
+      <action>maincpu.pb@108439=67</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite Meter">
+    <script state="run">
+      <action>maincpu.pb@1082E3=03</action>
+      <!--<action>maincpu.pb@1081EA=40</action>-->
+      <action>maincpu.pb@10825F=23</action>
+
+    </script>
+  </cheat>
+
+  <cheat desc="P1 Infinite HP">
+    <script state="run">
+      <action>maincpu.pb@108239=33</action>
+    </script>
+  </cheat>
+
+  <cheat desc="P2 Infinite Meter">
+    <script state="run">
+      <action>maincpu.pb@1084E3=03</action>
+      <action>maincpu.pb@1083EA=40</action>
+      <action>maincpu.pb@10845F=23</action>
+      <action>maincpu.pb@1083E0=10|(maincpu.pb@1083E0 BAND ~10)</action>
+    </script>
+  </cheat>
+
+  <cheat desc=" "/>
+
+  <cheat desc="No Background Music">
+    <script state="run">
+      <action>audiocpu.pb@FDE0=00</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Hide Background"> <comment>Activate before match start</comment>
+    <script state="on">
+      <action>temp0=maincpu.pb@10009B</action>
+      <action>temp1=maincpu.pb@10A788</action>
+      <action>temp2=maincpu.pb@10A83E</action>
+      <action>temp3=maincpu.rw@024884</action>
+    </script>
+    <script state="run">
+      <action condition="(maincpu.pb@10A786 != 0 and maincpu.pb@10A83F == 00)">maincpu.pb@10009B=00</action> <!-- activate only during match --> <!-- flashing text -->
+      <action condition="(maincpu.pb@10A786 != 0 and maincpu.pb@10A83F == 00)">maincpu.pb@10A788=temp1 bor 80</action> <!-- BG layers -->
+      <action condition="(maincpu.pb@10A786 != 0 and maincpu.pb@10A83F == 00)">maincpu.pb@10A83E=temp2 bor 80</action> <!-- portraits -->
+      <action condition="(maincpu.pb@10A786 != 0 and maincpu.pb@10A83F == 00)">maincpu.rw@024884=008F</action> <!-- HUD -->
+      <action condition="(maincpu.pb@10A786 != 0 and maincpu.pb@10A83F == 00)">maincpu.pw@10D934=8F8F</action> <!-- BG colour (pink) -->
+    </script>
+    <script state="off">
+      <action>maincpu.pb@10009B=temp0</action>
+      <action>maincpu.pb@10A788=temp1</action>
+      <action>maincpu.pb@10A83E=temp2</action>
+      <action>maincpu.rw@024884=temp3</action>
+    </script>
+  </cheat>
+
+  <cheat desc="Skip RAM/ROM Checks"> <comment>Also allows a quicker start-up without the green screens.</comment>
+    <script state="on">
+      <action>temp0 =maincpu.rd@C1315C</action>
+      <action>temp1 =maincpu.rd@C1314E</action>
+      <action>temp2 =maincpu.rd@C131E8</action>
+      <action>temp3 =maincpu.rd@C13184</action>
+      <action>temp4 =maincpu.rd@C1212E</action>
+      <action>temp5 =maincpu.rd@C134FA</action>
+    </script>
+    <script state="run">
+      <action condition="(maincpu.rd@C1315C==51CFFFF2)">maincpu.rd@C1315C=6000EB08</action> <!-- Euro + Japan-S2 BIOSs -->
+      <action condition="(maincpu.rd@C1314E==51CFFFF2)">maincpu.rd@C1314E=6000EB16</action> <!-- Euro-S1 + Japan-S1 BIOSs -->
+      <action condition="(maincpu.rd@C131E8==51CFFFF2)">maincpu.rd@C131E8=6000EA52</action> <!-- US BIOS -->
+      <action condition="(maincpu.rd@C13184==51CFFFF2)">maincpu.rd@C13184=6000EAB6</action> <!-- US-E BIOS -->
+      <action condition="(maincpu.rd@C1212E==51CFFFF2)">maincpu.rd@C1212E=6000EB36</action> <!-- Asia BIOS -->
+      <action condition="(maincpu.rd@C134FA==51CFFFF2)">maincpu.rd@C134FA=6000E892</action> <!-- Japan BIOS -->
+    </script>
+    <script state="off">
+      <action>maincpu.rd@C1315C=temp0 </action>
+      <action>maincpu.rd@C1314E=temp1 </action>
+      <action>maincpu.rd@C131E8=temp2 </action>
+      <action>maincpu.rd@C13184=temp3 </action>
+      <action>maincpu.rd@C1212E=temp4 </action>
+      <action>maincpu.rd@C134FA=temp5 </action>
+    </script>
+  </cheat>
+
+  <cheat desc="Infinite Credits"> <comment>Alternatively just set Free Play to ON in the Dip Switches menu</comment>
+    <script state="run">
+      <action>maincpu.rb@D00034=99</action>
+    </script>
+  </cheat>
+
+</mamecheat>
+<!-- Cheat file downloaded from http://www.mamecheat.co.uk, see cheat.txt for list of contributors. -->
