@@ -192,8 +192,35 @@ then
 end
 
 -- Crane Sweeper QCB + P
+if movePC_player2 == 0x00018a3a and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 -- Number 75 Kick QCF + B x 2 -or- D x 2
+if movePC_player1 == 0x00030534 and P2_hasBeenDamaged~=0 --hit 1 of 2
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x0003058C and P2_hasBeenDamaged~=0 --hit 2 of 2 (button D)
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x00030618 and newTrigger == 0x0C --hit 2 of 2 (button B)
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
 
 -- Flame Smash QCF + A
 if movePC_player1 == 0x000163F4 and newTrigger == 0xB4 and P2_hasBeenDamaged~=0
@@ -204,17 +231,52 @@ then
 end
 
 -- Nice Wound QCF + P   From Flame Smash
+if movePC_player1 == 0x00030716 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 -- Rust Slam HCB + P   From Flame Smash -or- P  From Nice Wound
+if movePC_player1 == 0x00030A9E and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 -- Sea Slash K         From Nice Wound or Rust Slam
+if movePC_player1 == 0x000309E8 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 -- Venom Bite QCF + C
+if movePC_player1 == 0x00030CE2 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 -- Sin Smash HCB + P   From Venom Bite
+if movePC_player1 == 0x00016402 and newTrigger == 0x78 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 -- Guilt Smash F   + P   From Sin Smash
-
+if movePC_player1 == 0x00030E9E and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
 --IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI
 
