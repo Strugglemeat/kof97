@@ -82,6 +82,13 @@ if movePC_player1 == 0x00034206 and movePC_player2 == 0x000184DA-- and P2_hasBee
 	end
 end
 
+if movePC_player1 == 0x00034F6A and movePC_player2 == 0x00035194 and newTrigger == 0xAE --final hit of super move
+	then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
 --近敌时←↙↓↘→←↙↓↘→＋ＢorＤ
 if movePC_player1 == 0x00035372 --and P2_hasBeenDamaged~=0
 then	
