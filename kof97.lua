@@ -36,6 +36,7 @@ then
 	DisplayBoxRight = DisplayBoxRight - 1
 end
 
+--DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON--
 
 --近敌时→↘↓↙←→↘↓↙←＋ＡorＣ
 
@@ -140,6 +141,86 @@ then
 	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
 	end
 end
+
+--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO
+
+-- Absolute Flair QCF x 2 + P
+if movePC_player1 == 0x000317D2 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+-- Orochinagi QCB, HCF + P
+if movePC_player1 == 0x0003141E and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+-- Flaming uppercut UCM + P
+if movePC_player1 == 0x000163F4 and newTrigger == 0x3C and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+-- R.E.D Kick UCM Backwards + K
+if movePC_player1 == 0x000163F4 and newTrigger == 0x72 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+-- Lightshine Explosion HCB + K
+if movePC_player1 == 0x00016402 and newTrigger == 0x36 and P2_hasBeenDamaged~=0 --hit 1 of 3
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x00030254 and P2_hasBeenDamaged~=0 --hit 2 of 2
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+-- Crane Sweeper QCB + P
+
+-- Number 75 Kick QCF + B x 2 -or- D x 2
+
+-- Flame Smash QCF + A
+if movePC_player1 == 0x000163F4 and newTrigger == 0xB4 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+-- Nice Wound QCF + P   From Flame Smash
+
+-- Rust Slam HCB + P   From Flame Smash -or- P  From Nice Wound
+
+-- Sea Slash K         From Nice Wound or Rust Slam
+
+-- Venom Bite QCF + C
+
+-- Sin Smash HCB + P   From Venom Bite
+
+-- Guilt Smash F   + P   From Sin Smash
+
+
+--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI
+
+
+
+
 
 --super flash
 
