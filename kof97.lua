@@ -36,6 +36,8 @@ then
 	DisplayBoxRight = DisplayBoxRight - 1
 end
 
+
+
 --DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON----DAIMON--
 
 --近敌时→↘↓↙←→↘↓↙←＋ＡorＣ
@@ -142,6 +144,7 @@ then
 	end
 end
 
+
 --KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO--KYO
 
 -- Absolute Flair QCF x 2 + P
@@ -192,7 +195,7 @@ then
 end
 
 -- Crane Sweeper QCB + P
-if movePC_player2 == 0x00018a3a and P2_hasBeenDamaged~=0
+if (movePC_player1 == 0x000310E4 or movePC_player1 == 0x000310C4 or movePC_player1 == 0x0003111c) and (P2_hasBeenDamaged~=0 or movePC_player2 == 0x18a3a)
 then	
 	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
 	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
@@ -278,12 +281,65 @@ then
 	end
 end
 
+
 --IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI--IORI
 
+-- QCF + P  (fireball creates too many false positives)
+--if movePC_player2 == 0x00018a3a and P2_hasBeenDamaged~=0 and mem:read_u8(0x108179)==0x99
+--then	
+--	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+--	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+--	end
+--end
 
+--QCB + P ( x3 ) 1 and 2 of 3
+if movePC_player1 == 0x5fab2 and movePC_player2 == 0x18a3a --P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
+--QCB + P ( x3 ) 3 of 3
+if movePC_player1 == 0x5fa5a and newTrigger == 0x24 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
+--DP + P
+if movePC_player1 == 0x5f344 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
 
+--HCB + K
+if (movePC_player1 == 0x5F5BE or movePC_player1 == 0x5F62E) and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--QCF , HCB + P
+if movePC_player1 == 0x60018 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x60102 and P2_hasBeenDamaged~=0 --final hit
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL
 --super flash
 
 if superflash_player1 > 0x00
@@ -299,6 +355,7 @@ then
 	DisplayBoxLeft = displayAmount
 	DisplayBoxRight = displayAmount
 end
+
 
 --create the box
 	if DisplayBoxLeft > 0
