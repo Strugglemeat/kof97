@@ -339,6 +339,93 @@ then
 	end
 end
 
+--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU--BENIMARU
+--qcf, qcf + P
+if movePC_player1 == 0x33516 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--hcb, hcb + P
+if movePC_player1 == 0x3378C and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcb + P
+if movePC_player1 == 0x3259C and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcb + P (in air)
+if movePC_player1 == 0x32800 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcb + P
+if movePC_player1 == 0x329EC and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--dp + K
+if movePC_player1 == 0x32B38 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcf + K
+if movePC_player1 == 0x32CC2 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--(close) hcb, f + P
+if movePC_player1 == 0x330b2 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--hcb + K
+if movePC_player1 == 0x33006 and P2_hasBeenDamaged~=0 --hit 1 of 3
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x32DD2 and P2_hasBeenDamaged~=0 --hit 2 of 3
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x32E40 and P2_hasBeenDamaged~=0 --hit 3 of 3
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
 --GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL
 --super flash
 
