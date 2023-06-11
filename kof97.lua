@@ -426,6 +426,102 @@ then
 	end
 end
 
+
+--TERRY--TERRY--TERRY--TERRY--TERRY
+--qcb, db, f + P
+if movePC_player1 == 0x36DE2 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcf, qcf + K
+--note that the first hit does not do any damage, very difficult to get a trigger
+
+if movePC_player1 == 0x37010 and movePC_player2 == 0x16C3A  --hit 2 of 4
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x37044 and P2_hasBeenDamaged~=0 --hit 3 of 4
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x370B2 and P2_hasBeenDamaged~=0 --hit 4 of 4
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcb + P
+if movePC_player1 == 0x36568 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcf + P
+if movePC_player1 == 0x366AA and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--qcb + K
+if movePC_player1 == 0x36876 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--dp + P
+if movePC_player1 == 0x369BA and P2_hasBeenDamaged~=0 --1st set of hits
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x369E8 and P2_hasBeenDamaged~=0 --2nd set of hits
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--dp + K
+if movePC_player1 == 0x36BA2 and P2_hasBeenDamaged~=0 --hit 1 of 2
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+if movePC_player1 == 0x36C58 and P2_hasBeenDamaged~=0 --hit 2 of 2
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
+--hcf + K
+if movePC_player1 == 0x37220 and P2_hasBeenDamaged~=0
+then	
+	if playerOnLeft == 0 then DisplayBoxLeft = displayAmount
+	elseif playerOnLeft == 1 then DisplayBoxRight = displayAmount
+	end
+end
+
 --GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL--GENERAL
 --super flash
 
